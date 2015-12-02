@@ -1,2 +1,5 @@
-# card-builder-docs
-Docs to assist with the implementation of Card Builder (http://cards.edenspiekermann.com/)
+# ESPI Card Builder Docs
+
+Here is a documentation to assist with the implementation of the [ESPI Card Builder](http://cards.edenspiekermann.com/).
+
+* [Using the ESPI Card Builder event emitter](/EVENT_TRACKING.md)
