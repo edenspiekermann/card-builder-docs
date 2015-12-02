@@ -56,12 +56,12 @@ window.addEventListener('message', function (event) {
 });
 ```
 
-**Important security notice:** it is highly recommended that you check the origin of the event PostMessage event before processing it. To do so, you can perform a check against `event.origin`, making sure it comes from the ESPI Card Builder hosting:
+**Important security notice:** it is highly recommended that you check the origin of the event PostMessage event before processing it. To do so, you can perform a check against `event.origin`, making sure it comes from the domain hosting the stack:
 
 ```js
 window.addEventListener('message', function (event) {
   // Do not proceed if it does not come from ESPI
-  if (event.origin !== 'http://cards.edenspiekermann.com') {
+  if (event.origin !== STACK_HOSTING_DOMAIN) {
     return;
   }
 
@@ -79,7 +79,7 @@ If you want to make your code agnostic no matter whether you use ESI rendering o
 (function (callback) {
   window.addEventListener('window.cardstacks.ready', function () {
     window.addEventListener('message', function (event) {
-      if (event.origin !== 'http://cards.edenspiekermann.com') {
+      if (event.origin !== STACK_HOSTING_DOMAIN) {
         return;
       }
 
