@@ -132,6 +132,8 @@ Each event fired by the ESPI Card Builder starts with the event category (*stack
 | share.whatsapp     | When sharing the stack on Whatsapp      |
 | media.play         | When playing the media of a Media Card  |
 
+You can play with these events and see how and when they are being fired by accessing a stack from your client environment (not to be mixed up with your admin area). A table displaying emitted events data in real time will be displayed below the stack so you can inspect them.
+
 ## Connecting to analytics providers
 
 The agnostic solution provided by the event dispatcher from the ESPI Card Builder makes it easy to connect it to any analytics provider on your side. The basic idea is to listen to event, and when captured, handle the data to the analytics provider.
