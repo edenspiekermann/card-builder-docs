@@ -75,6 +75,13 @@ http://name.cards.edenspiekermann.com/stacks/:id/esi/body?shareUrl=http://url.co
 ## Passing a custom sharing URL-Suffix
 Instead of passing a whole sharing url, you can pass in a sharing Url suffix which will be added to the sharing URL stored in the cards backend. This could be used for Url dispatching or tracking parameters.
 
+The `shareUrlQuerySuffix` should be URL-encoded.
+
 ```
-http://name.cards.edenspiekermann.com/stacks/:id/esi/body?shareUrlQuerySuffix=your/custom/url/suffix
+http://name.cards.edenspiekermann.com/stacks/:id/esi/body?shareUrlQuerySuffix=your-custom%3Dshare-suffix
 ```
+This will result in 
+```
+http://[your-cards-domain]/stacks/:id/esi/body?your-custom=share-suffix#s-356a19-226
+```
+where `s-356a19-226` is the CSS ID of the stack to be shared.
