@@ -66,8 +66,15 @@ Include this once pr page. For performance reasons, we suggest putting this at t
 
 By default the stack will share the current page it’s being displayed on. This is mostly just a fallback option and isn’t the prefered way of sharing. There should also be a share URL set in the admin area of the stack – this is where the stack lives permanently on the parent site. This is especially useful when the user get’s to the stack by browsing related stacks, and wants to share this specific stack.
 
-As well as this a custom share URL parametercan be added to the Body ESI URL. This can have something like campaign tracking parameters, which should be fired when the stack is shared.
+As well as this a custom share URL parameter can be added to the Body ESI URL. This can have something like campaign tracking parameters, which should be fired when the stack is shared.
 
 ```
 http://name.cards.edenspiekermann.com/stacks/:id/esi/body?shareUrl=http://url.com?param=true
+```
+
+## Passing a custom sharing URL-Suffix
+Instead of passing a whole sharing url, you can pass in a sharing Url suffix which will be added to the sharing URL stored in the cards backend. This could be used for Url dispatching or tracking parameters.
+
+```
+http://name.cards.edenspiekermann.com/stacks/:id/esi/body?shareUrlQuerySuffix=your/custom/url/suffix
 ```
