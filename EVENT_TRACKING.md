@@ -125,6 +125,7 @@ Each event fired by the ESPI Card Builder starts with the event category (*stack
 | card.swipe.next    | When swiping right                      |
 | card.jump          | When using a Jump Card                  |
 | card.choice.select | When clicking a choice on a Choice Card |
+| card.link.click    | When clicking a link button on a card   |
 | share.url-overlay  | When opening the sharing overlay        |
 | share.facebook     | When sharing the stack on Facebook      |
 | share.twitter      | When sharing the stack on Twitter       |
